@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Content from "./pageComponent/Content";
 
 export default function Home() {
   return (
-    <div>
-      
-    </div>
+    <main className="min-h-screen pt-18">
+      <Content />
+    </main>
   );
 }

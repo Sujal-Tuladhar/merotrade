@@ -1,20 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "./pageComponent/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
   title: "MeroTrade",
-  description: "MeroTrade is a platform for viewing best traders and their performance in Nepal.",
+  description:
+    "MeroTrade is a platform for viewing best traders and their performance in Nepal.",
 };
 
 export default function RootLayout({
@@ -25,8 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} font-sans antialiased bg-[#1F1F1F] text-white`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
