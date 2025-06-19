@@ -51,6 +51,9 @@ const HeaderBar = () => {
 const Screen = () => {
   return (
     <div className="relative z-0 grid h-full w-full place-content-center overflow-hidden rounded-[20px] bg-white">
+      <div className="text-2xl font-bold text-black mb-70 underline">
+        merotrade
+      </div>
       <Image
         src="/images/tradeLogo.svg"
         alt="MeroTrade Logo"
@@ -59,9 +62,8 @@ const Screen = () => {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
       />
       <button className="absolute bottom-4 left-4 right-4 z-10 rounded-lg border-[1px] bg-white py-2 text-sm font-medium text-black backdrop-blur">
-        Get Started
+        Start Trading
       </button>
-
       <div className="absolute -bottom-72 left-[50%] h-96 w-96 -translate-x-[50%] rounded-full bg-[#FFD53A]" />
     </div>
   );

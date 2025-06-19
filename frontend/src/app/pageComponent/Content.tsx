@@ -7,6 +7,7 @@ import RotatingText from "@/components/TextAnimations/RotatingText/RotatingText"
 import Squares from "@/components/Backgrounds/Squares/Squares";
 // import CircularText from "@/components/TextAnimations/CircularText/CircularText";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Content = () => {
   return (
@@ -78,6 +79,22 @@ const Content = () => {
       <div className="w-full min-h-screen flex items-center justify-end pr-32">
         <FloatingPhone />
       </div>
+      <motion.div
+        className="absolute bottom-30 left-1/2 cursor-pointer"
+        animate={{ y: [0, 10, 0] }}
+        transition={{
+          duration: 1.5,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
+        <Image
+          src="/images/arrow-down.svg"
+          alt="Scroll down"
+          width={50}
+          height={50}
+        />
+      </motion.div>
     </div>
   );
 };
